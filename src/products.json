@@ -1,0 +1,50 @@
+[
+  {
+    "category": "Furniture",
+    "price": "$219.99",
+    "stocked": true,
+    "name": "Office desk"
+  },
+  {
+    "category": "Furniture",
+    "price": "$399.99",
+    "stocked": true,
+    "name": "Office chair"
+  },
+  {
+    "category": "Furniture",
+    "price": "$49.99",
+    "stocked": false,
+    "name": "TV mount"
+  },
+  {
+    "category": "Decor",
+    "price": "$199.99",
+    "stocked": true,
+    "name": "Ceiling fan"
+  },
+  {
+    "category": "Decor",
+    "price": "$24.99",
+    "stocked": false,
+    "name": "Carpet"
+  },
+  {
+    "category": "Decor",
+    "price": "$15.99",
+    "stocked": true,
+    "name": "Curtains"
+  },
+  {
+    "category": "Electronics",
+    "price": "$59.99",
+    "stocked": true,
+    "name": "GTA VI"
+  },
+  {
+    "category": "Electronics",
+    "price": "$599.99",
+    "stocked": false,
+    "name": "RTX 3080"
+  }
+]
