@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-import FilterableProductTable from "./components/FilterableProductTable";
+import FilterablePropertyTable from "./components/FilterablePropertyTable";
 
-import PRODUCTS from "./products.json";
+import PROPERTIES from "./properties.json";
 
 function App() {
-  // console.log(PRODUCTS);
-  return <FilterableProductTable products={PRODUCTS} />;
+  // console.log(PropertyS);
+  return <FilterablePropertyTable properties={PROPERTIES} />;
 }
 
 export default App;

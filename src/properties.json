@@ -1,0 +1,52 @@
+[
+  {
+    "category": "Cabin",
+    "price": 750,
+    "address": "123 Brush Creek",
+    "city": "Bend",
+    "state": "OR",
+    "bedrooms": 10,
+    "bathrooms": 8,
+    "description": "It's out in nature. Rent now!"
+  },
+  {
+    "category": "House",
+    "price": 400,
+    "address": "2015 Hamburger Ln",
+    "city": "Pflugerville",
+    "state": "TX",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "description": "It's a house."
+  },
+  {
+    "category": "Condo",
+    "price": 120,
+    "address": "55 Wilson Rd",
+    "city": "Tampa",
+    "state": "FL",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "description": "Rent please"
+  },
+  {
+    "category": "Condo",
+    "price": 80,
+    "address": "321 Average Condo",
+    "city": "Dallas",
+    "state": "TX",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "description": "5 minutes from downtown!"
+  },
+  {
+    "category": "Cabin",
+    "price": 440,
+    "address": "215 Lancelot Dr",
+    "city": "Hillsboro",
+    "state": "TX",
+    "bedrooms": 6,
+    "bathrooms": 5,
+    "description": "Next to a lake or something"
+  }
+]
