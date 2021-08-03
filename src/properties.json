@@ -7,7 +7,8 @@
     "state": "OR",
     "bedrooms": 10,
     "bathrooms": 8,
-    "description": "It's out in nature. Rent now!"
+    "description": "It's out in nature. Rent now!",
+    "image": "./images/cabin1"
   },
   {
     "category": "House",
@@ -17,7 +18,8 @@
     "state": "TX",
     "bedrooms": 4,
     "bathrooms": 3,
-    "description": "It's a house."
+    "description": "It's a house.",
+    "image": "./images/house1"
   },
   {
     "category": "Condo",
@@ -27,7 +29,8 @@
     "state": "FL",
     "bedrooms": 2,
     "bathrooms": 1,
-    "description": "Rent please"
+    "description": "Rent please",
+    "image": "./images/condo1"
   },
   {
     "category": "Condo",
@@ -37,7 +40,8 @@
     "state": "TX",
     "bedrooms": 2,
     "bathrooms": 2,
-    "description": "5 minutes from downtown!"
+    "description": "5 minutes from downtown!",
+    "image": "./images/condo2"
   },
   {
     "category": "Cabin",
@@ -47,6 +51,7 @@
     "state": "TX",
     "bedrooms": 6,
     "bathrooms": 5,
-    "description": "Next to a lake or something"
+    "description": "Next to a lake or something",
+    "image": "./images/cabin2"
   }
 ]
