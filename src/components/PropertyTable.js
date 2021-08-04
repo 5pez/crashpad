@@ -17,6 +17,14 @@ const PropertyTable = () => {
       description: "It's out in nature. Rent now!",
       image:
         "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      ammenities: [
+        "Lake",
+        "Kitchen",
+        "Heating",
+        "Internet",
+        "Air Conditioning",
+        "Washer/Dryer",
+      ],
     },
     {
       category: "House",
@@ -29,6 +37,13 @@ const PropertyTable = () => {
       description: "It's a house.",
       image:
         "https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      ammenities: [
+        "Pool",
+        "Kitchen",
+        "Heating",
+        "Air Conditioning",
+        "Washer/Dryer",
+      ],
     },
     {
       category: "Condo",
@@ -41,6 +56,13 @@ const PropertyTable = () => {
       description: "Rent please",
       image:
         "https://images.unsplash.com/photo-1560185009-5bf9f2849488?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      ammenities: [
+        "Pool",
+        "Kitchen",
+        "Heating",
+        "Air Conditioning",
+        "Washer/Dryer",
+      ],
     },
     {
       category: "Condo",
@@ -53,6 +75,13 @@ const PropertyTable = () => {
       description: "5 minutes from downtown!",
       image:
         "https://images.unsplash.com/photo-1611095210561-67f0832b1ca3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      ammenities: [
+        "Pool",
+        "Kitchen",
+        "Heating",
+        "Air Conditioning",
+        "Washer/Dryer",
+      ],
     },
     {
       category: "Cabin",
@@ -65,6 +94,13 @@ const PropertyTable = () => {
       description: "Next to a lake or something",
       image:
         "https://images.unsplash.com/photo-1525113990976-399835c43838?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      ammenities: [
+        "Pool",
+        "Kitchen",
+        "Heating",
+        "Air Conditioning",
+        "Washer/Dryer",
+      ],
     },
   ];
   // const properties = [props].map((property) => [
@@ -130,9 +166,9 @@ const PropertyTable = () => {
                   <tr key={property.address}>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
-                        <div className="flex-shrink-0 h-10 w-10">
+                        <div className="flex-shrink-0 h-20 w-20">
                           <img
-                            className="h-10 w-10 rounded-full"
+                            className="h-20 w-20 rounded-full"
                             src={property.image}
                             alt={
                               "Photograph of " +
@@ -151,6 +187,9 @@ const PropertyTable = () => {
                           <div className="text-sm text-gray-500">
                             {property.description}
                           </div>
+                          <div className="text-xs text-blue-500">
+                            {property.bedrooms} bds · {property.bathrooms} ba
+                          </div>
                         </div>
                       </div>
                     </td>
@@ -163,20 +202,26 @@ const PropertyTable = () => {
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                      <span className="px-2 inline-flex text-sm leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                         ${property.price}
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       {property.category}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <a
-                        href="#"
-                        className="text-indigo-600 hover:text-indigo-900"
-                      >
-                        Tags go here
-                      </a>
+                    <td className=" px-6 py-4 whitespace-nowrap">
+                      <div className="px-6 py-4">
+                        {property.ammenities.map((ammenity, index) => {
+                          return (
+                            <span
+                              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2"
+                              key={index}
+                            >
+                              {ammenity}
+                            </span>
+                          );
+                        })}
+                      </div>
                     </td>
                   </tr>
                 ))}
