@@ -81,15 +81,13 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://i.imgur.com/exiSxd8.png)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`AaronElam`, `crashpad`, `twitter`, `elam.j.aaron@gmail.com`, `Crashpad`, `Crashpad is an online system for listing and booking short-term rentals.`
-
 ### Built With
 
-- []()
-- []()
-- []()
+- [React](https://reactjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [PostgreSQL (soon)](https://www.postgresql.org/)
+- [Node.js (soon)](https://nodejs.org/en/)
+- [Express (soon)](https://expressjs.com/)
 
 <!-- GETTING STARTED -->
 
