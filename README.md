@@ -79,7 +79,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://i.imgur.com/exiSxd8.png)
+![product-screenshot](https://i.imgur.com/exiSxd8.png)
 
 ### Built With
 
