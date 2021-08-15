@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import FilterablePropertyTable from "./components/FilterablePropertyTable";
+import FilterablePropertyGrid from "./components/FilterablePropertyGrid";
 import Navbar from "./components/Navbar";
 
 import PROPERTIES from "./properties.json";
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <FilterablePropertyTable properties={PROPERTIES} />;
+      <FilterablePropertyGrid properties={PROPERTIES} />
     </>
   );
 }

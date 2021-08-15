@@ -8,7 +8,7 @@
     "bedrooms": 10,
     "bathrooms": 8,
     "description": "It's out in nature. Rent now!",
-    "image": "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+    "image": "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
     "ammenities": [
       "Lake",
       "Kitchen",
@@ -27,7 +27,7 @@
     "bedrooms": 4,
     "bathrooms": 3,
     "description": "It's a house.",
-    "image": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+    "image": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
     "ammenities": [
       "Pool",
       "Kitchen",
@@ -45,7 +45,7 @@
     "bedrooms": 2,
     "bathrooms": 1,
     "description": "Rent please",
-    "image": "https://images.unsplash.com/photo-1560185009-5bf9f2849488?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+    "image": "https://images.unsplash.com/photo-1560185009-5bf9f2849488?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
     "ammenities": [
       "Pool",
       "Kitchen",
@@ -63,7 +63,7 @@
     "bedrooms": 2,
     "bathrooms": 2,
     "description": "5 minutes from downtown!",
-    "image": "https://images.unsplash.com/photo-1611095210561-67f0832b1ca3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+    "image": "https://images.unsplash.com/photo-1611095210561-67f0832b1ca3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
     "ammenities": [
       "Pool",
       "Kitchen",
@@ -81,7 +81,7 @@
     "bedrooms": 6,
     "bathrooms": 5,
     "description": "Next to a lake or something",
-    "image": "https://images.unsplash.com/photo-1525113990976-399835c43838?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+    "image": "https://images.unsplash.com/photo-1525113990976-399835c43838?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
     "ammenities": [
       "Pool",
       "Kitchen",

@@ -1,6 +1,8 @@
+/*
+ *  not in use
+ */
+
 import React from "react";
-import PropertyRow from "./PropertyRow";
-import PropertyCategoryRow from "./PropertyCategoryRow";
 import "../css/PropertyTable.css";
 import properties from "../properties.json";
 
