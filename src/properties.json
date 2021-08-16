@@ -21,7 +21,7 @@
   {
     "category": "House",
     "price": 400,
-    "address": "2015 Hamburger Ln",
+    "address": "2021 Hamburger Ln",
     "city": "Houston",
     "state": "TX",
     "bedrooms": 4,
@@ -89,5 +89,65 @@
       "Air Conditioning",
       "Washer/Dryer"
     ]
+  },
+  {
+    "category": "Condo",
+    "price": 90,
+    "address": "4345 Lancer Dr.",
+    "city": "Truth or Consequences",
+    "state": "NM",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "description": "This description is very long to test what we do when someone likes to write a lot about their property. Wow this property's description is so long that there's no way we would display this on the card.",
+    "image": "https://images.unsplash.com/photo-1622866306950-81d17097d458?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"]
+  },
+  {
+    "category": "Condo",
+    "price": 90,
+    "address": "4345 Lancer Dr.",
+    "city": "Austin",
+    "state": "TX",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "description": "10 mins from downtown",
+    "image": "https://images.unsplash.com/photo-1622866306950-81d17097d458?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"]
+  },
+  {
+    "category": "Condo",
+    "price": 90,
+    "address": "4345 Lancer Dr.",
+    "city": "Austin",
+    "state": "TX",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "description": "10 mins from downtown",
+    "image": "https://images.unsplash.com/photo-1622866306950-81d17097d458?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"]
+  },
+  {
+    "category": "Condo",
+    "price": 90,
+    "address": "4345 Lancer Dr.",
+    "city": "Austin",
+    "state": "TX",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "description": "10 mins from downtown",
+    "image": "https://images.unsplash.com/photo-1622866306950-81d17097d458?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"]
+  },
+  {
+    "category": "Condo",
+    "price": 90,
+    "address": "4345 Lancer Dr.",
+    "city": "Austin",
+    "state": "TX",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "description": "This description is very long to test what we do when someone likes to write a lot about their property. Wow this property's description is so long that there's no way we would display this on the card.",
+    "image": "https://images.unsplash.com/photo-1622866306950-81d17097d458?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"]
   }
 ]
