@@ -4,7 +4,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: "Pads", href: "#", current: true },
+  { name: "Pads", href: "/", current: true },
   { name: "Deals", href: "#", current: false },
   { name: "Support", href: "#", current: false },
   { name: "Calendar", href: "#", current: false },
@@ -39,11 +39,13 @@ export default function Navbar() {
                     src="https://i.imgur.com/7rw5Dsb.png"
                     alt="Crashpad"
                   />
-                  <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="https://i.imgur.com/7rw5Dsb.png"
-                    alt="Crashpad"
-                  />
+                  <a href="/">
+                    <img
+                      className="hidden lg:block h-8 w-auto"
+                      src="https://i.imgur.com/7rw5Dsb.png"
+                      alt="Crashpad"
+                    />
+                  </a>
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
@@ -80,7 +82,7 @@ export default function Navbar() {
                           <span className="sr-only">Open user menu</span>
                           <img
                             className="h-8 w-8 rounded-full"
-                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            src="https://avatars.githubusercontent.com/u/44043565?s=50"
                             alt=""
                           />
                         </Menu.Button>

@@ -16,7 +16,8 @@
       "Internet",
       "Air Conditioning",
       "Washer/Dryer"
-    ]
+    ],
+    "id": "5b8b8e8e-b8f5-4f4d-a8e2-e9e9f8f8f8f8"
   },
   {
     "category": "House",
@@ -34,7 +35,8 @@
       "Heating",
       "Air Conditioning",
       "Washer/Dryer"
-    ]
+    ],
+    "id": "c23b0537-8680-4abc-bceb-dd0958e071e6"
   },
   {
     "category": "Condo",
@@ -52,7 +54,8 @@
       "Heating",
       "Air Conditioning",
       "Washer/Dryer"
-    ]
+    ],
+    "id": "1cb3be55-daba-457a-832f-6a5cbbe33e43"
   },
   {
     "category": "Condo",
@@ -70,7 +73,8 @@
       "Heating",
       "Air Conditioning",
       "Washer/Dryer"
-    ]
+    ],
+    "id": "c7c8d3be-4a12-49f9-9de0-c45b3f62fbbf"
   },
   {
     "category": "Cabin",
@@ -88,7 +92,8 @@
       "Heating",
       "Air Conditioning",
       "Washer/Dryer"
-    ]
+    ],
+    "id": "ae4cc7be-5c0b-4a00-8597-35ac065fc70a"
   },
   {
     "category": "Condo",
@@ -100,7 +105,8 @@
     "bathrooms": 1,
     "description": "This description is very long to test what we do when someone likes to write a lot about their property. Wow this property's description is so long that there's no way we would display this on the card.",
     "image": "https://images.unsplash.com/photo-1622866306950-81d17097d458?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"]
+    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"],
+    "id": "d51d87ca-e18d-4bb8-adc6-7b3da213bba8"
   },
   {
     "category": "Condo",
@@ -112,7 +118,8 @@
     "bathrooms": 1,
     "description": "10 mins from downtown",
     "image": "https://images.unsplash.com/photo-1622866306950-81d17097d458?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"]
+    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"],
+    "id": "0d13ca26-8c2d-474f-81ce-970e05197c68"
   },
   {
     "category": "Condo",
@@ -124,7 +131,8 @@
     "bathrooms": 1,
     "description": "10 mins from downtown",
     "image": "https://images.unsplash.com/photo-1622866306950-81d17097d458?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"]
+    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"],
+    "id": "988ca2be-00d2-4062-9a12-afe1fa7c9c9c"
   },
   {
     "category": "Condo",
@@ -136,7 +144,8 @@
     "bathrooms": 1,
     "description": "10 mins from downtown",
     "image": "https://images.unsplash.com/photo-1622866306950-81d17097d458?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"]
+    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"],
+    "id": "40878563-85fb-4574-bcc3-a9961948ff7d"
   },
   {
     "category": "Condo",
@@ -148,6 +157,7 @@
     "bathrooms": 1,
     "description": "This description is very long to test what we do when someone likes to write a lot about their property. Wow this property's description is so long that there's no way we would display this on the card.",
     "image": "https://images.unsplash.com/photo-1622866306950-81d17097d458?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"]
+    "ammenities": ["Kitchen", "Heating", "Air Conditioning", "Washer/Dryer"],
+    "id": "54c4a11f-0a24-4661-be1a-39c85911f685"
   }
 ]
