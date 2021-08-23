@@ -17,7 +17,7 @@ function App() {
           <Route path="/" exact>
             <FilterablePropertyGrid properties={PROPERTIES} />
           </Route>
-          <Route path="/pad/id:" exact component={PropertyPage} />
+          <Route path="/pad/:id" exact component={PropertyPage} />
         </Switch>
       </Router>
       <div class="flex flex-col">

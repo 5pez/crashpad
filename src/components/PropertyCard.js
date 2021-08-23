@@ -1,5 +1,6 @@
 import { BookmarkOutline } from "heroicons-react";
 import { Link } from "react-router-dom";
+import PropertyPage from "./PropertyPage";
 
 export default function PropertyCard(props) {
   const property = props.properties;

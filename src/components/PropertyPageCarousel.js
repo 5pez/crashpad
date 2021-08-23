@@ -1,4 +1,6 @@
 // Carousel from https://tailwind-elements.com/docs/standard/components/carousel/
+import "../css/Carousel.css";
+
 export default function PropertyPageCarousel() {
   return (
     <>
