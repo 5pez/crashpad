@@ -22,7 +22,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/AaronElam/crashpad">
+  <a href="https://thecrashpad.netlify.app/">
     <img src="src/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -34,7 +34,7 @@
     <a href="https://github.com/AaronElam/crashpad"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/AaronElam/crashpad">View Demo</a>
+    <a href="https://thecrashpad.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/AaronElam/crashpad/issues">Report Bug</a>
     ·
