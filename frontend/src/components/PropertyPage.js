@@ -1,5 +1,6 @@
 import PropertyPageCarousel from "./PropertyPageCarousel";
 import properties from "../properties.json";
+import LazyLoad from "react-lazyload";
 import { BookmarkOutline } from "heroicons-react";
 
 export default function PropertyPage({ match }) {
@@ -48,26 +49,28 @@ export default function PropertyPage({ match }) {
         </div>
 
         {/* Images */}
-        <div class="container grid grid-cols-3 gap-2 mx-auto">
-          <div class="w-full rounded hover:opacity-50">
-            <img src={image} alt="image" />
+        <LazyLoad>
+          <div class="container grid grid-cols-3 gap-2 mx-auto">
+            <div class="w-full rounded">
+              <img src={image} alt="image" />
+            </div>
+            <div class="w-full rounded">
+              <img src={image} alt="image" />
+            </div>
+            <div class="w-full rounded">
+              <img src={image} alt="image" />
+            </div>
+            <div class="w-full rounded">
+              <img src={image} alt="image" />
+            </div>
+            <div class="w-full rounded">
+              <img src={image} alt="image" />
+            </div>
+            <div class="w-full rounded">
+              <img src={image} alt="image" />
+            </div>
           </div>
-          <div class="w-full rounded hover:opacity-50">
-            <img src={image} alt="image" />
-          </div>
-          <div class="w-full rounded hover:opacity-50">
-            <img src={image} alt="image" />
-          </div>
-          <div class="w-full rounded hover:opacity-50">
-            <img src={image} alt="image" />
-          </div>
-          <div class="w-full rounded hover:opacity-50">
-            <img src={image} alt="image" />
-          </div>
-          <div class="w-full rounded hover:opacity-50">
-            <img src={image} alt="image" />
-          </div>
-        </div>
+        </LazyLoad>
 
         <div class="flex flex-col p-4 divide-y divide-y-reverse">
           <h2 class="font-semibold text-2xl">{`${category} hosted by HOSTNAME`}</h2>

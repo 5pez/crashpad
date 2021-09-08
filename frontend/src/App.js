@@ -27,7 +27,6 @@ function App() {
     <>
       <Navbar />
       <Router>
-        {/* Fix routing later. Won't render PropertyPage component */}
         <Switch>
           <Route path="/" exact>
             <FilterablePropertyGrid properties={PROPERTIES} />
