@@ -3,26 +3,12 @@ import "./App.css";
 import FilterablePropertyGrid from "./components/FilterablePropertyGrid";
 import Navbar from "./components/Navbar";
 import PropertyPage from "./components/PropertyPage";
+import CreateListing from "./components/CreateListing";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import PROPERTIES from "./properties.json";
 
 function App() {
-  // const [data, setData] = React.useState(null);
-
-  // React.useEffect(() => {
-  //   fetch("/api")
-  //     .then((res) => res.json())
-  //     .then((data) => setData(data.message));
-  // }, []);
-
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <p>{!data ? "Loading..." : data}</p>
-  //     </header>
-  //   </div>
-  // );
   return (
     <>
       <Navbar />
@@ -31,6 +17,8 @@ function App() {
           <Route path="/" exact>
             <FilterablePropertyGrid properties={PROPERTIES} />
           </Route>
+          {/* TODO: Fix bug where create-listing doesnt wipe the current stuff */}
+          <Route path="/create-listing" exact component={CreateListing} />
           <Route path="/pad/:id" exact component={PropertyPage} />
         </Switch>
       </Router>

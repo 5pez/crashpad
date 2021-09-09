@@ -1,3 +1,11 @@
+const placeholders = [
+  "Cabin",
+  "House",
+  "Flat",
+  "Condo",
+  "Austin, TX",
+  "San Francisco, CA",
+];
 export default function Filter() {
   return (
     <form class="w-full max-w-sm">
@@ -5,7 +13,9 @@ export default function Filter() {
         <input
           class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
           type="text"
-          placeholder="Cabin"
+          placeholder={
+            placeholders[Math.floor(Math.random() * placeholders.length)]
+          }
           aria-label="filter"
         />
         <button

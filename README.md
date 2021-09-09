@@ -23,13 +23,15 @@
 <br />
 <p align="center">
   <a href="https://thecrashpad.netlify.app/">
-    <img src="src/images/logo.png" alt="Logo" width="80" height="80">
+    <img src="/frontend/src/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Crashpad</h3>
 
   <p align="center">
     Crashpad is an online system for listing and booking short-term rentals.
+    <br />
+    09/09/2021 UPDATE: Live site is not live since I have not migrated to a VPS
     <br />
     <a href="https://github.com/AaronElam/crashpad"><strong>Explore the docs »</strong></a>
     <br />
