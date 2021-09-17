@@ -1,5 +1,6 @@
 import { BookmarkOutline } from "heroicons-react";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazyload";
 import PropertyPage from "./PropertyPage";
 
 export default function PropertyCard(props) {
@@ -9,18 +10,20 @@ export default function PropertyCard(props) {
     <article class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl">
       <div>
         <Link to={`/pad/${property.id}`}>
-          <img
-            alt={
-              "Photograph of " +
-              property.address +
-              " property in " +
-              property.city +
-              ", " +
-              property.state
-            }
-            class="object-cover h-48 w-full hover:opacity-50"
-            src={property.image}
-          />
+          <LazyLoad height={250}>
+            <img
+              alt={
+                "Photograph of " +
+                property.address +
+                " property in " +
+                property.city +
+                ", " +
+                property.state
+              }
+              class="object-cover h-48 w-full hover:opacity-50"
+              src={property.image}
+            />
+          </LazyLoad>
         </Link>
       </div>
 

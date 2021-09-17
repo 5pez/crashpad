@@ -13,8 +13,8 @@ let propertySchema = new Schema(
     bathrooms: Number,
     description: String,
     image: String,
-    ammenities: Array,
-    id: String,
+    ammenities: String,
+    zip: Number,
   },
   {
     collection: "properties",

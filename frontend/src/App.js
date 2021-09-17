@@ -3,7 +3,7 @@ import "./App.css";
 import FilterablePropertyGrid from "./components/FilterablePropertyGrid";
 import PropertyPage from "./components/PropertyPage";
 import CreateListing from "./components/CreateListing";
-import { BrowserRouter as Router, Switch, Link, Route } from "react-router-dom";
+import { Switch, Link, Route } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 
@@ -36,13 +36,13 @@ function App() {
                       src="https://i.imgur.com/7rw5Dsb.png"
                       alt="Crashpad"
                     />
-                    <a href="/">
+                    <Link exact={true} to="/">
                       <img
                         className="hidden lg:block h-8 w-auto"
                         src="https://i.imgur.com/7rw5Dsb.png"
                         alt="Crashpad"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="hidden sm:block sm:ml-6">
                     <div className="flex space-x-4">
@@ -170,9 +170,13 @@ function App() {
       {/* End navbar */}
 
       <Switch>
-        <Route path={`/create-listing`} exact component={CreateListing} />
-        <Route path="/pad/:id" exact component={PropertyPage} />
-        <Route path="/" exact>
+        <Route
+          path={`/create-listing`}
+          exact={true}
+          component={CreateListing}
+        />
+        <Route path="/pad/:id" exact={true} component={PropertyPage} />
+        <Route path="/" exact={true}>
           <FilterablePropertyGrid properties={PROPERTIES} />
         </Route>
       </Switch>

@@ -6,7 +6,9 @@ import Filter from "./Filter";
 const FilterablePropertyGrid = (props) => {
   return (
     <div class="container my-12 mx-auto px-4 md:px-12">
-      <Filter />
+      <div class="flex flex-wrap justify-center">
+        <Filter />
+      </div>
       <div class="flex flex-wrap -mx-1 lg:-mx-4">
         {props.properties.map((property) => (
           <div
