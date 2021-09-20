@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+///TODO: Redo this component with hooks
+
 export default class CreateListing extends Component {
   constructor(props) {
     super(props);
@@ -29,13 +31,13 @@ export default class CreateListing extends Component {
       city: "",
       state: "",
       country: "",
-      // price: 0,
-      // bedrooms: 0,
-      // bathrooms: 0,
+      price: 0,
+      bedrooms: 0,
+      bathrooms: 0,
       description: "",
       image: "",
       ammenities: "",
-      // zip: 0,
+      zip: 0,
     };
   }
   onChangePropertyCategory(e) {

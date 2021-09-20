@@ -7,6 +7,7 @@ const createError = require("http-errors");
 
 // Express Route
 const propertyRoute = require("./routes/property.route");
+const userRoute = require("./routes/user.route");
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
@@ -32,6 +33,7 @@ app.use(
 );
 app.use(cors());
 app.use("/properties", propertyRoute);
+app.use("/user", userRoute);
 
 // PORT
 const port = process.env.PORT || 4000;

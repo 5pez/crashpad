@@ -9,10 +9,11 @@ let propertySchema = require("../models/Property");
 router.route("/create-property").post((req, res, next) => {
   propertySchema.create(req.body, (error, data) => {
     if (error) {
+      console.log("error in /create-property");
       return next(error);
     } else {
-      console.log(data);
       res.json(data);
+      console.log("\nData from create:\n" + data);
     }
   });
 });

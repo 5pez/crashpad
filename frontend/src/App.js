@@ -3,6 +3,7 @@ import "./App.css";
 import FilterablePropertyGrid from "./components/FilterablePropertyGrid";
 import PropertyPage from "./components/PropertyPage";
 import CreateListing from "./components/CreateListing";
+import Register from "./components/Register";
 import { Switch, Link, Route } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
@@ -13,7 +14,7 @@ const navigation = [
   { name: "Pads", link: "/", current: true },
   { name: "Create Listing", link: `/create-listing`, current: false },
   { name: "Support", link: "#", current: false },
-  { name: "Calendar", link: "#", current: false },
+  { name: "Register", link: "/register", current: false },
 ];
 
 function classNames(...classes) {
@@ -175,6 +176,7 @@ function App() {
           exact={true}
           component={CreateListing}
         />
+        <Route path="/register" exact={true} component={Register} />
         <Route path="/pad/:id" exact={true} component={PropertyPage} />
         <Route path="/" exact={true}>
           <FilterablePropertyGrid properties={PROPERTIES} />
