@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 ///TODO: Redo this component with hooks
+// use npm package Multer for image upload
 
 export default class CreateListing extends Component {
   constructor(props) {
@@ -182,9 +183,10 @@ export default class CreateListing extends Component {
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-price"
                   type="number"
+                  min="0"
                   placeholder="80"
                   value={this.state.price}
-                  onChange={this.onchangePropertyPrice}
+                  onChange={this.onChangePropertyPrice}
                 ></input>
               </div>
               <div class="w-full md:w-1/4 px-3">
@@ -198,6 +200,7 @@ export default class CreateListing extends Component {
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-bedrooms"
                   type="number"
+                  min="0"
                   placeholder="2"
                   value={this.state.bedrooms}
                   onChange={this.onChangePropertyBedrooms}
@@ -214,6 +217,7 @@ export default class CreateListing extends Component {
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-baths"
                   type="number"
+                  min="0"
                   placeholder="1.5"
                   value={this.state.bathrooms}
                   onChange={this.onChangePropertyBathrooms}
@@ -400,6 +404,7 @@ export default class CreateListing extends Component {
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-zip"
                   type="number"
+                  min="0"
                   maxLength="5"
                   placeholder="78701"
                   value={this.state.zip}

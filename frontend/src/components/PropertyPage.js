@@ -1,4 +1,3 @@
-import PropertyPageCarousel from "./PropertyPageCarousel";
 import properties from "../properties.json";
 import LazyLoad from "react-lazyload";
 import { BookmarkOutline } from "heroicons-react";

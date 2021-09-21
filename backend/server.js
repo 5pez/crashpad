@@ -33,7 +33,7 @@ app.use(
 );
 app.use(cors());
 app.use("/properties", propertyRoute);
-app.use("/user", userRoute);
+app.use("/users", userRoute);
 
 // PORT
 const port = process.env.PORT || 4000;
