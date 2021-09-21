@@ -33,7 +33,7 @@
     <br />
     09/09/2021 UPDATE: Live site is not live since I have not migrated to a VPS
     <br />
-    <a href="https://github.com/AaronElam/crashpad"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/AaronElam/crashpad/tree/master/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://thecrashpad.netlify.app/">View Demo</a>
