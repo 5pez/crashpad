@@ -5,7 +5,6 @@ import PropertyPage from "./components/PropertyPage";
 import CreateListing from "./components/CreateListing";
 import Register from "./components/Register";
 import Login from "./components/Login";
-import Filter from "./components/Filter";
 import { Switch, Link, Route } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon } from "@heroicons/react/outline";
