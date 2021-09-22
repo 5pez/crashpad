@@ -24,9 +24,17 @@ const Register = () => {
           class="w-full max-w-lg"
           onSubmit={(e) => {
             e.preventDefault();
-            axios.post("/users/register", userObject).then((res) => {
-              console.log(res);
-            });
+            axios
+              .post("/users/register", userObject)
+              .then((res) => {
+                alert(
+                  `Thanks for registering, ${res.data.first_name}!\nYou can now login with these credentials.`
+                );
+                console.log(res);
+              })
+              .catch((err) => {
+                alert(`Account with ${email} already exists.`);
+              });
           }}
         >
           <div class="flex flex-wrap -mx-3 mb-6">

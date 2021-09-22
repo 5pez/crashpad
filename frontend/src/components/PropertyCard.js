@@ -1,3 +1,5 @@
+import React from "react";
+import { useState, useEffect } from "react";
 import { BookmarkOutline } from "heroicons-react";
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazyload";
@@ -6,10 +8,26 @@ import PropertyPage from "./PropertyPage";
 export default function PropertyCard(props) {
   const property = props.properties;
   const currency = "$";
+  const [image, setImage] = useState(property.image);
+
+  useEffect(() => {
+    if (
+      property.image === "" ||
+      property.image === undefined ||
+      !property.image.includes("/")
+    ) {
+      setImage(
+        "https://www.realestateguide.com/wp-content/plugins/rets_duo/assets/noimage-large.png"
+      );
+    } else {
+      setImage(property.image);
+    }
+  }, [image]);
+
   return (
     <article class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl">
       <div>
-        <Link to={`/pad/${property.id}`}>
+        <Link to={`/pad/${property._id}`}>
           <LazyLoad height={250}>
             <img
               alt={
@@ -21,7 +39,7 @@ export default function PropertyCard(props) {
                 property.state
               }
               class="object-cover h-48 w-full hover:opacity-50"
-              src={property.image}
+              src={image}
             />
           </LazyLoad>
         </Link>
@@ -29,7 +47,7 @@ export default function PropertyCard(props) {
 
       <header class="flex items-center justify-between leading-tight md:pt-4 md:pl-4 md:pr-4">
         <h1 class="text-lg truncate">
-          <Link to={`/pad/${property.id}`}>
+          <Link to={`/pad/${property._id}`}>
             <a class="no-underline font-bold hover:text-yellow-500">
               {property.description}
             </a>

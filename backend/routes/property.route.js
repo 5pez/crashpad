@@ -33,6 +33,7 @@ router.route("/").get((req, res) => {
 router.route("/edit-property/:id").get((req, res) => {
   propertySchema.findById(req.params.id, (error, data) => {
     if (error) {
+      console.log("error in /edit-property");
       return next(error);
     } else {
       res.json(data);

@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 let propertySchema = new Schema(
   {
+    // _id: mongoose.Types.ObjectId,
     category: String,
     price: Number,
     address: String,

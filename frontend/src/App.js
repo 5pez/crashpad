@@ -1,4 +1,7 @@
+// I know this is very messy
+
 import { React, Fragment } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import FilterablePropertyGrid from "./components/FilterablePropertyGrid";
 import PropertyPage from "./components/PropertyPage";
@@ -8,8 +11,9 @@ import Login from "./components/Login";
 import { Switch, Link, Route } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon } from "@heroicons/react/outline";
+import axios from "axios";
 
-import PROPERTIES from "./properties.json";
+// import PROPERTIES from "./properties.json";
 
 const navigation = [
   { name: "Pads", link: "/", current: true },
@@ -23,6 +27,17 @@ function classNames(...classes) {
 }
 
 function App() {
+  const [properties, setProperties] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/properties")
+      .then((res) => {
+        setProperties(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <>
       {/* Start navbar */}
@@ -181,7 +196,7 @@ function App() {
         <Route path="/register" exact={true} component={Register} />
         <Route path="/pad/:id" exact={true} component={PropertyPage} />
         <Route path="/" exact={true}>
-          <FilterablePropertyGrid properties={PROPERTIES} />
+          <FilterablePropertyGrid properties={properties} />
         </Route>
       </Switch>
       <div class="flex flex-col">

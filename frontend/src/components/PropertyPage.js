@@ -1,34 +1,44 @@
+import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import properties from "../properties.json";
 import LazyLoad from "react-lazyload";
 import { BookmarkOutline } from "heroicons-react";
 
-export default function PropertyPage({ match }) {
-  const property = () => {
-    const { id } = match.params;
-    const property = properties.find(({ id: propId }) => propId === id);
-    return property;
-  };
+const PropertyPage = (props) => {
+  const [property, setProperty] = useState([]);
+  const [image, setImage] = useState(property.image);
 
-  const {
-    category,
-    price,
-    address,
-    city,
-    state,
-    country,
-    bedrooms,
-    bathrooms,
-    description,
-    image,
-    ammenities,
-    id,
-  } = property();
+  useEffect(() => {
+    axios
+      .get(
+        `http://localhost:4000/properties/edit-property/${props.match.params.id}`
+      )
+      .then((res) => {
+        setProperty(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  useEffect(() => {
+    if (
+      property.image === "" ||
+      property.image === undefined ||
+      !property.image.includes("/")
+    ) {
+      setImage(
+        "https://www.realestateguide.com/wp-content/plugins/rets_duo/assets/noimage-large.png"
+      );
+    } else {
+      setImage(property.image);
+    }
+  }, [property.image]);
 
   return (
     <div class="container mx-auto px-4 md:px-12">
       <section class="py-8 px-4">
         <h1 class="font-bold text-3xl leading-tight text-left break-words">
-          {description}
+          {property.description}
         </h1>
         <div class="flex justify-between pb-4">
           <span class="flex space-x-2">
@@ -37,10 +47,10 @@ export default function PropertyPage({ match }) {
             <span class="">Superhost</span>
             <span class="">·</span>
             <a
-              href={`http://maps.google.com/?q=${city}, ${state}, ${country}`}
+              href={`http://maps.google.com/?q=${property.city}, ${property.state}, ${property.country}`}
               target="_blank"
               class="underline"
-            >{`${city}, ${state}, ${country}`}</a>
+            >{`${property.city}, ${property.state}, ${property.country}`}</a>
           </span>
           <a href="#" class="flex space font-semibold hover:text-yellow-500">
             {<BookmarkOutline />}Save
@@ -72,20 +82,20 @@ export default function PropertyPage({ match }) {
         </LazyLoad>
 
         <div class="flex flex-col p-4 divide-y divide-y-reverse">
-          <h2 class="font-semibold text-2xl">{`${category} hosted by HOSTNAME`}</h2>
+          <h2 class="font-semibold text-2xl">{`${property.category} hosted by HOSTNAME`}</h2>
           <span class="flex space-x-1">
             {/* change to guests */}
-            <span>{`${bedrooms} guests`}</span>
+            <span>{`${property.bedrooms} guests`}</span>
             <span>·</span>
-            <span>{`${bedrooms} bedrooms`}</span>
+            <span>{`${property.bedrooms} bedrooms`}</span>
             <span>·</span>
-            <span>{`${bathrooms} baths`}</span>
+            <span>{`${property.bathrooms} baths`}</span>
           </span>
         </div>
 
         <div class="flex justify-between px-4">
           <div class="truncate text-xs text-gray-600">
-            {ammenities.map((ammenity, index) => {
+            {/* {ammenities.map((ammenity, index) => {
               return (
                 <span
                   className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-1"
@@ -94,10 +104,10 @@ export default function PropertyPage({ match }) {
                   {ammenity}
                 </span>
               );
-            })}
+            })} */}
           </div>
           <span class="border-2 border-gray-200 rounded shadow-lg p-4">
-            <h3 class="text-xl pb-4">{`$${price} / night`}</h3>
+            <h3 class="text-xl pb-4">{`$${property.price} / night`}</h3>
             <button class="inline-block bg-yellow-500 rounded px-24 py-4 text-lg font-semibold text-white mr-1 focus:ring-4 focus:ring-yellow-300 focus:ring-inset">
               Reserve
             </button>
@@ -106,4 +116,6 @@ export default function PropertyPage({ match }) {
       </section>
     </div>
   );
-}
+};
+
+export default PropertyPage;

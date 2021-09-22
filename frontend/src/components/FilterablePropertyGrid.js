@@ -10,10 +10,11 @@ import PropertyCard from "./PropertyCard";
 const placeholders = [
   "Cabin",
   "House",
-  "Flat",
   "Condo",
-  "Austin, TX",
-  "San Francisco, CA",
+  "Austin",
+  "San Francisco",
+  "nature",
+  "downtown",
 ];
 
 const FilterablePropertyGrid = (props) => {
@@ -41,6 +42,7 @@ const FilterablePropertyGrid = (props) => {
         properties.filter((property) => {
           return (
             property.description.match(search) ||
+            property.category.match(search) ||
             property.address.match(search) ||
             property.city.match(search) ||
             property.state.match(search)
@@ -51,8 +53,8 @@ const FilterablePropertyGrid = (props) => {
     if (search.length === 0) {
       setProperties(props.properties);
     }
-    console.log(search);
-    console.log(properties);
+    // console.log(search);
+    // console.log(properties);
   }, [search]);
 
   return (
@@ -92,7 +94,7 @@ const FilterablePropertyGrid = (props) => {
         <div class="flex flex-wrap -mx-1 lg:-mx-4">
           {properties.map((property) => (
             <div
-              key={property.id}
+              key={property._id}
               class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3"
             >
               <LazyLoad>

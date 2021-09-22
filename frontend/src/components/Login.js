@@ -19,10 +19,16 @@ const Login = () => {
           class="w-full max-w-lg"
           onSubmit={(e) => {
             e.preventDefault();
-            axios.post("/users/login", userObject).then((res) => {
-              console.log(res);
-              window.location.href = "/";
-            });
+            axios
+              .post("/users/login", userObject)
+              .then((res) => {
+                alert(`Logged in as ${res.data.first_name}`);
+                console.log(res);
+              })
+              .catch((err) => {
+                alert("Account doesn't exist. Please register first.");
+                console.log(err);
+              });
           }}
         >
           <label
