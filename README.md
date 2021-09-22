@@ -31,7 +31,9 @@
   <p align="center">
     Crashpad is an online system for listing and booking short-term rentals.
     <br />
-  Available on <a href="https://crashpad.dev">crashpad.dev</a>
+  Available on <a href="https://crashpad.dev" target=_blank>crashpad.dev</a>
+  <br/>
+  If you're visiting around <b>09/22</b>, use the IP <a href="http://165.227.192.85/" target=_blank>165.227.192.85</a> since the DNS probably hasn't updated.
     <br />
     <br />
     <a href="https://github.com/AaronElam/crashpad/tree/master/docs"><strong>Explore the docs »</strong></a>
