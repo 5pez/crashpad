@@ -31,12 +31,13 @@
   <p align="center">
     Crashpad is an online system for listing and booking short-term rentals.
     <br />
-    09/09/2021 UPDATE: Live site is not live since I have not migrated to a VPS
+  Available on <a href="https://crashpad.dev">crashpad.dev</a>
+    <br />
     <br />
     <a href="https://github.com/AaronElam/crashpad/tree/master/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://thecrashpad.netlify.app/">View Demo</a>
+    <a href="https://crashpad.dev">View Demo</a>
     ·
     <a href="https://github.com/AaronElam/crashpad/issues">Report Bug</a>
     ·
@@ -59,14 +60,11 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#running">Running</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -76,13 +74,16 @@
 
 ![product-screenshot](https://i.imgur.com/pxzk7JD.png)
 
+This project started as a project in my software engineering class. Unfortunately for us, the course was over the summer of 2020 and no actual software was written, only documents. In that course, I learned how to discuss the technical requirements of a project with a group and present those ideas to a shareholder (our professor). <br /> <b>This web application is the result of me wanting to turn that project into a reality.</b>
+
 ### Built With
 
+- [Mongodb](https://www.mongodb.com/)
+- [Express](https://expressjs.com/)
 - [React](https://reactjs.org/)
+- [Node.js](https://nodejs.org/en/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [PostgreSQL (soon)](https://www.postgresql.org/)
-- [Node.js (soon)](https://nodejs.org/en/)
-- [Express (soon)](https://expressjs.com/)
+- [JSON Web Tokens](https://jwt.io/)
 
 <!-- GETTING STARTED -->
 
@@ -92,49 +93,61 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+These are the things you need to get Crashpad fully up and running on your machine.
 
 - npm
   ```sh
   npm install npm@latest -g
   ```
+- Check versions
+  ```sh
+  node -v
+  npm -v
+  ```
+ - Install mongodb
+  ```sh
+  sudo apt-get install mongodb
+  ```
+- Create file for mongodb
+  ```sh
+  sudo mkdir /data && touch /data/db
+  ```
 
 ### Installation
-
 1. Clone the repo
    ```sh
    git clone https://github.com/AaronElam/crashpad.git
    ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
+   
+2. npm install in both /frontend and /backend
+  ```sh
+  npm i
+  ```
+  
+3. For frontend, you must install two additional dependencies, babel and typescript. I'll fix this later.
+  ```sh
+  npm i @babel/core@^7.13.0
+  npm i typescript@>=2.8.0
+  ```
+  
+4. Done
 
-<!-- USAGE EXAMPLES -->
+## Running
 
-## Usage
+Open up 3 terminal tabs.
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<!-- ROADMAP -->
-
-## Roadmap
-
-See the [open issues](https://github.com/AaronElam/crashpad/issues) for a list of proposed features (and known issues).
-
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Frontend
+  ```sh
+  cd crashpad/frontend/ && npm start
+  ```
+2. Backend
+  ```sh
+  cd crashpad/backend/ && node server.js
+  ```
+3. Database
+  ```sh
+  mongod
+  ```
 
 <!-- LICENSE -->
 
@@ -151,9 +164,3 @@ Aaron Elam - elam.j.aaron@gmail.com
 Project Link: [https://github.com/AaronElam/crashpad](https://github.com/AaronElam/crashpad)
 
 <!-- ACKNOWLEDGEMENTS -->
-
-## Acknowledgements
-
-- []()
-- []()
-- []()
