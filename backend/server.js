@@ -4,10 +4,22 @@ let cors = require("cors");
 let bodyParser = require("body-parser");
 let dbConfig = require("./database/db");
 const createError = require("http-errors");
+const path = require("path");
 
 // Express Route
 const propertyRoute = require("./routes/property.route");
 const userRoute = require("./routes/user.route");
+
+// If in production, then use static frontend build files.
+if (process.env.NODE_ENV === "production") {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, "../build")));
+
+  // Handle React routing, return all requests to React app
+  app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "../build", "index.html"));
+  });
+}
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
