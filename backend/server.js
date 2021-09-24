@@ -10,16 +10,16 @@ const path = require("path");
 const propertyRoute = require("./routes/property.route");
 const userRoute = require("./routes/user.route");
 
-// If in production, then use static frontend build files.
-if (process.env.NODE_ENV === "production") {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, "../frontend/build")));
+// // If in production, then use static frontend build files.
+// if (process.env.NODE_ENV === "production") {
+//   // Serve any static files
+//   app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-  // Handle React routing, return all requests to React app
-  app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
-  });
-}
+//   // Handle React routing, return all requests to React app
+//   app.get("*", function (req, res) {
+//     res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
+//   });
+// }
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
@@ -44,8 +44,8 @@ app.use(
   })
 );
 app.use(cors());
-app.use("/properties", propertyRoute);
-app.use("/users", userRoute);
+app.use("/properties", cors(), propertyRoute);
+app.use("/users", cors(), userRoute);
 
 // PORT
 const port = process.env.PORT || 4000;
