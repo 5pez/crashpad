@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/properties")
+      .get("http://127.0.0.1:4000/properties")
       .then((res) => {
         setProperties(res.data);
       })

@@ -49,7 +49,7 @@ app.use("/users", cors(), userRoute);
 
 // PORT
 const port = process.env.PORT || 4000;
-const server = app.listen(port, "localhost", () => {
+const server = app.listen(port, "127.0.0.1", () => {
   console.log("Connected to port " + port);
 });
 

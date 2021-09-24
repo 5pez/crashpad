@@ -20,7 +20,7 @@ const Login = () => {
           onSubmit={(e) => {
             e.preventDefault();
             axios
-              .post("http://localhost:4000/users/login", userObject)
+              .post("http://127.0.0.1:4000/users/login", userObject)
               .then((res) => {
                 alert(`Logged in as ${res.data.first_name}`);
                 console.log(res);

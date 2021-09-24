@@ -100,7 +100,7 @@ export default class CreateListing extends Component {
     if (
       axios
         .post(
-          "http://localhost:4000/properties/create-property",
+          "http://127.0.0.1:4000/properties/create-property",
           propertyObject
         )
         .then((res) => console.log(res.data))

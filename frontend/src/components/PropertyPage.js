@@ -12,7 +12,7 @@ const PropertyPage = (props) => {
   useEffect(() => {
     axios
       .get(
-        `http://localhost:4000/properties/edit-property/${props.match.params.id}`
+        `http://127.0.0.1:4000/properties/edit-property/${props.match.params.id}`
       )
       .then((res) => {
         setProperty(res.data);
