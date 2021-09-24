@@ -25,7 +25,7 @@ const Register = () => {
           onSubmit={(e) => {
             e.preventDefault();
             axios
-              .post("/users/register", userObject)
+              .post("http://localhost:4000/users/register", userObject)
               .then((res) => {
                 alert(
                   `Thanks for registering, ${res.data.first_name}!\nYou can now login with these credentials.`
