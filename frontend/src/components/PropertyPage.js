@@ -11,9 +11,7 @@ const PropertyPage = (props) => {
 
   useEffect(() => {
     axios
-      .get(
-        `http://127.0.0.1:4000/properties/edit-property/${props.match.params.id}`
-      )
+      .get(`https://api.crashpad.dev/pads/${props.match.params.id}`)
       .then((res) => {
         setProperty(res.data);
       })

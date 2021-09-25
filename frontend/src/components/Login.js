@@ -20,7 +20,7 @@ const Login = () => {
           onSubmit={(e) => {
             e.preventDefault();
             axios
-              .post("http://127.0.0.1:4000/users/login", userObject)
+              .post("https://api.crashpad.dev/users", userObject)
               .then((res) => {
                 alert(`Logged in as ${res.data.first_name}`);
                 console.log(res);

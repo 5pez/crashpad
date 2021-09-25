@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { BookmarkOutline } from "heroicons-react";
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazyload";
-import PropertyPage from "./PropertyPage";
 
 export default function PropertyCard(props) {
   const property = props.properties;
@@ -27,7 +26,7 @@ export default function PropertyCard(props) {
   return (
     <article class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl">
       <div>
-        <Link to={`/pad/${property._id}`}>
+        <Link to={`/pad/${property.id}`}>
           <LazyLoad height={250}>
             <img
               alt={
@@ -47,7 +46,7 @@ export default function PropertyCard(props) {
 
       <header class="flex items-center justify-between leading-tight md:pt-4 md:pl-4 md:pr-4">
         <h1 class="text-lg truncate">
-          <Link to={`/pad/${property._id}`}>
+          <Link to={`/pad/${property.id}`}>
             <a class="no-underline font-bold hover:text-yellow-500">
               {property.description}
             </a>

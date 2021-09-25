@@ -25,7 +25,7 @@ const Register = () => {
           onSubmit={(e) => {
             e.preventDefault();
             axios
-              .post("http://127.0.0.1:4000/users/register", userObject)
+              .post("https://api.crashpad.dev/users", userObject)
               .then((res) => {
                 alert(
                   `Thanks for registering, ${res.data.first_name}!\nYou can now login with these credentials.`
@@ -119,6 +119,8 @@ const Register = () => {
             <select
               required
               class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-4 pr-8 mt-6 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+              value={userType}
+              onChange={(e) => setUserType(e.target.value)}
             >
               <option>Will you be renting or hosting?</option>
               <option value="renter">I will be renting</option>
