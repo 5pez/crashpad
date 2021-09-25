@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:4000/properties")
+      .get("https://api.crashpad.dev/pads")
       .then((res) => {
         setProperties(res.data);
       })

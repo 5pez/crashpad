@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pads",
+  "info": {
+    "name": "Pads",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "country": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "string"
+    },
+    "ammenities": {
+      "type": "string"
+    },
+    "bedrooms": {
+      "type": "decimal"
+    },
+    "bathrooms": {
+      "type": "decimal"
+    },
+    "zip": {
+      "type": "integer",
+      "default": 0,
+      "max": 99999
+    },
+    "state": {
+      "type": "string"
+    }
+  }
+}
