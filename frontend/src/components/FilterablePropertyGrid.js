@@ -59,14 +59,23 @@ const FilterablePropertyGrid = (props) => {
 
   return (
     <>
-      <div class="flex flex-wrap justify-center m-4">
-        <form onSubmit={submitHandler} class="content-center w-full max-w-lg">
-          <div class="flex items-center border-b border-teal-500 py-2">
+      <div className="flex flex-wrap justify-center m-4">
+        <form
+          onSubmit={submitHandler}
+          className="content-center w-full max-w-lg"
+        >
+          <div className="flex items-center border-b border-teal-500 py-2">
+            <label
+              className="block text-gray-700 text-sm font-bold mr-2"
+              htmlFor="search"
+            >
+              Search...
+            </label>
             <input
               name="filter"
               value={search}
               onChange={handleFilterChange}
-              class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+              className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
               type="text"
               placeholder={
                 placeholders[Math.floor(Math.random() * placeholders.length)]
@@ -74,13 +83,13 @@ const FilterablePropertyGrid = (props) => {
               aria-label="filter"
             />
             {/* <button
-          class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 py-1 px-2 rounded"
+          className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 py-1 px-2 rounded"
           type="submit"
         >
           Filter
         </button> */}
             <button
-              class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded"
+              className="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded"
               type="button"
               onClick={resetSearchField}
             >
@@ -90,12 +99,12 @@ const FilterablePropertyGrid = (props) => {
         </form>
       </div>
 
-      <div class="container my-2 mx-auto px-4 md:px-12">
-        <div class="flex flex-wrap -mx-1 lg:-mx-4">
+      <div className="container my-2 mx-auto px-4 sm:px-12">
+        <div className="flex flex-wrap -mx-1 sm:-mx-4">
           {properties.map((property) => (
             <div
               key={property._id}
-              class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3"
+              className="my-1 px-1 w-48 md:w-full lg:my-4 lg:px-4 lg:w-1/3"
             >
               <LazyLoad>
                 <PropertyCard properties={property} />

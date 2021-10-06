@@ -8,17 +8,17 @@ export default function Navbar() {
   return (
     <div>
       <nav className="bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+        <div className="max-w-3xl mx-auto px-4 md:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-24">
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <img
-                  className="block h-8 w-auto"
+                  className="block h-10 w-auto"
                   src="https://i.imgur.com/7rw5Dsb.png"
                   alt="Crashpad logo"
                 />
               </div>
-              <div className="hidden md:block">
+              <div className="hidden lg:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <Link exact={true} to="/">
                     <a className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -46,7 +46,7 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            <div className="-mr-2 flex md:hidden">
+            <div className="-mr-2 flex lg:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
@@ -103,8 +103,11 @@ export default function Navbar() {
           leaveTo="opacity-0 scale-95"
         >
           {(ref) => (
-            <div className="md:hidden" id="mobile-menu">
-              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className="lg:hidden" id="mobile-menu">
+              <div
+                ref={ref}
+                className="px-2 pt-2 pb-3 space-y-1 text-center md:px-3"
+              >
                 <Link exact={true} to="/">
                   <a className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">
                     Pads

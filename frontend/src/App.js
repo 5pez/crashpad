@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return isLoading ? (
-    <div className="App">Loading...</div>
+    <div className="">Loading...</div>
   ) : (
     <>
       <Navbar />
@@ -43,11 +43,6 @@ function App() {
           <FilterablePropertyGrid properties={properties} />
         </Route>
       </Switch>
-      <div class="flex flex-col">
-        <footer class="h-8 bg-gray-800 text-center text-yellow-500">
-          <p>Disclaimer: None of the above properties are actually for rent.</p>
-        </footer>
-      </div>
     </>
   );
 }

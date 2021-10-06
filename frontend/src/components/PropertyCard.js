@@ -24,7 +24,7 @@ export default function PropertyCard(props) {
   }, [image]);
 
   return (
-    <article class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl">
+    <article className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl">
       <div>
         <Link to={`/pad/${property.id}`}>
           <LazyLoad height={250}>
@@ -37,17 +37,17 @@ export default function PropertyCard(props) {
                 ", " +
                 property.state
               }
-              class="object-cover h-48 w-full hover:opacity-50"
+              className="object-cover h-48 w-full md:h-72 hover:opacity-50"
               src={image}
             />
           </LazyLoad>
         </Link>
       </div>
 
-      <header class="flex items-center justify-between leading-tight md:pt-4 md:pl-4 md:pr-4">
-        <h1 class="text-lg truncate">
+      <header className="flex items-center justify-between leading-tight md:pt-4 md:pl-4 md:pr-4">
+        <h1 className="text-lg truncate">
           <Link to={`/pad/${property.id}`}>
-            <a class="no-underline font-bold hover:text-yellow-500">
+            <a className="no-underline font-bold hover:text-yellow-500">
               {property.description}
             </a>
           </Link>
@@ -57,20 +57,20 @@ export default function PropertyCard(props) {
         </p>
       </header>
 
-      <div class="flex items-center justify-between leading-none md:pl-4 md:pr-4">
-        <h2 class="text-base">{property.address}</h2>
-        <p class="text-sm">
+      <div className="flex items-center justify-between leading-none md:pl-4 md:pr-4">
+        <h2 className="text-base">{property.address}</h2>
+        <p className="text-sm">
           {property.bedrooms} br · {property.bathrooms} bath
         </p>
       </div>
 
-      <footer class="flex items-center justify-between leading-none md:pl-4 md:pb-4 md:pr-4">
+      <footer className="flex items-center justify-between leading-none md:pl-4 md:pb-4 md:pr-4">
         <div className="text-sm text-gray-500">
           {property.city + ", " + property.state}
         </div>
-        <div class="flex items-center leading-none">
+        <div className="flex items-center leading-none">
           <a href="#">
-            <BookmarkOutline class="text-gray-800 hover:text-yellow-500" />
+            <BookmarkOutline className="text-gray-800 hover:text-yellow-500" />
           </a>
         </div>
       </footer>

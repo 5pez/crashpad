@@ -408,14 +408,17 @@ export default class CreateListing extends Component {
                 >
                   Country
                 </label>
-                <input
+                <select
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-country"
                   type="text"
                   placeholder="United States"
                   value={this.state.country}
                   onChange={this.onChangePropertyCountry}
-                ></input>
+                >
+                  <option value="United States">United States</option>
+                  <option value="Canada">Canada</option>
+                </select>
               </div>
               <div class="w-full md:w-full px-3 mb-6 md:mb-0 py-8">
                 <button
