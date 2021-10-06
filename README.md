@@ -72,7 +72,7 @@
 
 ## About The Project
 
-![product-screenshot](https://i.imgur.com/pxzk7JD.png)
+![product-screenshot](https://crashpad.dev/meta.png)
 
 This project started as a project in my software engineering class. Unfortunately for us, the course was over the summer of 2020 and no actual software was written, only documents. In that course, I learned how to discuss the technical requirements of a project with a group and present those ideas to a shareholder (our professor). <br /> <b>This web application is the result of me wanting to turn that project into a reality.</b>
 
