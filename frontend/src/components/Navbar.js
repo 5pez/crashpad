@@ -5,6 +5,10 @@ import { Transition } from "@headlessui/react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  <link
+    href="https://use.fontawesome.com/releases/v5.0.2/css/brands.css"
+    rel="stylesheet"
+  />;
   return (
     <div>
       <nav className="bg-gray-800">
@@ -43,6 +47,14 @@ export default function Navbar() {
                       Login
                     </a>
                   </Link>
+
+                  <a
+                    href="https://github.com/AaronElam/crashpad"
+                    target="_blank"
+                    className="fab fa-github text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Github
+                  </a>
                 </div>
               </div>
             </div>
@@ -129,6 +141,12 @@ export default function Navbar() {
                 <Link exact={true} to="/login">
                   <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                     Login
+                  </a>
+                </Link>
+
+                <Link exact={true} to="https://github.com/AaronElam/crashpad">
+                  <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                    GitHub
                   </a>
                 </Link>
               </div>

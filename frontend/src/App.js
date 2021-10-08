@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return isLoading ? (
-    <div className="">Loading...</div>
+    <div className="text-center">Loading...</div>
   ) : (
     <>
       <Navbar />
