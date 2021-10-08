@@ -8,12 +8,14 @@ import { BookmarkOutline } from "heroicons-react";
 const PropertyPage = (props) => {
   const [property, setProperty] = useState([]);
   const [image, setImage] = useState(property.image);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
       .get(`https://api.crashpad.dev/pads/${props.match.params.id}`)
       .then((res) => {
         setProperty(res.data);
+        setLoading(false);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -32,7 +34,9 @@ const PropertyPage = (props) => {
     }
   }, [property.image]);
 
-  return (
+  return isLoading ? (
+    <div className="text-center">Loading pad...</div>
+  ) : (
     <div class="container mx-auto px-4 md:px-12">
       <section class="py-8 px-4">
         <h1 class="font-bold text-3xl leading-tight text-left break-words">

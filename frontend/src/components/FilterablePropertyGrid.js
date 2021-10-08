@@ -17,13 +17,21 @@ const placeholders = [
   "downtown",
 ];
 
+const maxPrice = 2000;
+
 const FilterablePropertyGrid = (props) => {
   const [properties, setProperties] = useState(props.properties);
   const [search, setSearch] = useState("");
+  const [price, setPrice] = useState(maxPrice);
 
   const handleFilterChange = (e) => {
     e.preventDefault();
     setSearch(e.target.value);
+  };
+
+  const handlePriceChange = (e) => {
+    e.preventDefault();
+    setPrice(e.target.value);
   };
 
   const resetSearchField = (e) => {
@@ -35,27 +43,33 @@ const FilterablePropertyGrid = (props) => {
     e.preventDefault();
   };
 
-  // todo: add price filters
   useEffect(() => {
+    if (price < maxPrice) {
+      setProperties(
+        properties.filter((property) => {
+          return property.price <= price;
+        })
+      );
+    }
+
     if (search.length > 0) {
       setProperties(
         properties.filter((property) => {
           return (
-            property.description.match(search) ||
-            property.category.match(search) ||
-            property.address.match(search) ||
-            property.city.match(search) ||
-            property.state.match(search)
+            property.description.toLowerCase().includes(search.toLowerCase()) ||
+            property.address.toLowerCase().includes(search.toLowerCase()) ||
+            property.city.toLowerCase().includes(search.toLowerCase()) ||
+            property.state.toLowerCase().includes(search.toLowerCase())
           );
         })
       );
     }
-    if (search.length === 0) {
+    if (search.length === 0 && price === maxPrice) {
       setProperties(props.properties);
     }
     // console.log(search);
     // console.log(properties);
-  }, [search]);
+  }, [search, price]);
 
   return (
     <>
@@ -77,17 +91,13 @@ const FilterablePropertyGrid = (props) => {
               onChange={handleFilterChange}
               className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
               type="text"
+              // bug here, if you change price, it'll change placeholder
               placeholder={
                 placeholders[Math.floor(Math.random() * placeholders.length)]
               }
               aria-label="filter"
             />
-            {/* <button
-          className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 py-1 px-2 rounded"
-          type="submit"
-        >
-          Filter
-        </button> */}
+
             <button
               className="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded"
               type="button"
@@ -95,6 +105,25 @@ const FilterablePropertyGrid = (props) => {
             >
               Clear
             </button>
+
+            <label htmlFor="price">Pad price ${price}</label>
+            <input
+              className="form-control"
+              type="range"
+              name="price"
+              min="0"
+              max={maxPrice}
+              step="50"
+              id="price"
+              value={price}
+              onChange={handlePriceChange}
+            ></input>
+            {/* <button
+          className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 py-1 px-2 rounded"
+          type="submit"
+        >
+          Filter
+        </button> */}
           </div>
         </form>
       </div>
