@@ -44,7 +44,6 @@ function App() {
           <FilterablePropertyGrid properties={properties} />
         </Route>
       </Switch>
-      )
     </>
   );
 }
