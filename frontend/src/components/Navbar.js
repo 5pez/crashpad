@@ -16,11 +16,13 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-24">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <img
-                  className="block h-10 w-auto"
-                  src="https://i.imgur.com/7rw5Dsb.png"
-                  alt="Crashpad logo"
-                />
+                <Link to="/" className="flex items-center">
+                  <img
+                    className="block h-10 w-auto"
+                    src="https://i.imgur.com/7rw5Dsb.png"
+                    alt="Crashpad logo"
+                  />
+                </Link>
               </div>
               <div className="hidden lg:block">
                 <div className="ml-10 flex items-baseline space-x-4">
@@ -51,13 +53,15 @@ export default function Navbar() {
                   <a
                     href="https://github.com/AaronElam/crashpad"
                     target="_blank"
-                    className="fab fa-github text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Github
+                    <b>GitHub</b>
                   </a>
                 </div>
               </div>
             </div>
+
+            {/* hamburger */}
             <div className="-mr-2 flex lg:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}

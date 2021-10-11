@@ -2,11 +2,11 @@ import React from "react";
 import axios from "axios";
 
 const Login = () => {
-  const [email, setEmail] = React.useState("");
+  const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const isEnabled = email.length > 0 && password.length > 0;
+  const isEnabled = username.length > 0 && password.length > 0;
   const userObject = {
-    email: email,
+    identifier: username,
     password: password,
   };
   return (
@@ -20,9 +20,10 @@ const Login = () => {
           onSubmit={(e) => {
             e.preventDefault();
             axios
-              .post("https://api.crashpad.dev/users", userObject)
+              // .post("https://api.crashpad.dev/auth/local", userObject)
+              .post("https://api.crashpad.dev/auth/local", userObject)
               .then((res) => {
-                alert(`Logged in as ${res.data.first_name}`);
+                alert(`Welcome, ${res.data.user.first_name}`);
                 console.log(res);
               })
               .catch((err) => {
@@ -33,18 +34,18 @@ const Login = () => {
         >
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            htmlFor="email"
+            htmlFor="username"
           >
-            Email
+            Username
           </label>
           <input
-            id="email"
+            id="username"
             className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white"
             type="text"
-            name="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            name="username"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"

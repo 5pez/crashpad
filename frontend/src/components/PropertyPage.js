@@ -12,6 +12,7 @@ const PropertyPage = (props) => {
 
   useEffect(() => {
     axios
+      // .get(`https://api.crashpad.dev/pads/${props.match.params.id}`)
       .get(`https://api.crashpad.dev/pads/${props.match.params.id}`)
       .then((res) => {
         setProperty(res.data);

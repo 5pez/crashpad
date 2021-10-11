@@ -1,6 +1,7 @@
 // I couldn't figure out how I wanted to handle swapping data between Filter and FilterablePropertyGrid,
 // so I just made them both the same component.
 
+import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
 import LazyLoad from "react-lazyload";
@@ -44,7 +45,8 @@ const FilterablePropertyGrid = (props) => {
   };
 
   useEffect(() => {
-    if (price < maxPrice) {
+    if (price <= maxPrice) {
+      console.log(price);
       setProperties(
         properties.filter((property) => {
           return property.price <= price;

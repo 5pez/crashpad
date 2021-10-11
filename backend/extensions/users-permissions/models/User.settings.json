@@ -19,7 +19,7 @@
     },
     "email": {
       "type": "email",
-      "minLength": 6,
+      "minLength": 3,
       "configurable": false,
       "required": true
     },

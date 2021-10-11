@@ -99,7 +99,13 @@ export default class CreateListing extends Component {
     };
     if (
       axios
-        .post("https://api.crashpad.dev/pads", propertyObject)
+        // .post("https://api.crashpad.dev/pads", propertyObject)
+        .post("https://api.crashpad.dev/pads", {
+          propertyObject,
+          headers: {
+            Authorization: "",
+          },
+        })
         .then((res) => console.log(res.data))
     )
       alert("Successfully created property");
