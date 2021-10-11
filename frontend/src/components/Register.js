@@ -6,13 +6,19 @@ const Register = () => {
   const [lastName, setLastName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [username, setUsername] = React.useState("");
   const [userType, setUserType] = React.useState("");
-  const isEnabled = email.length > 0 && password.length > 0;
+  const isEnabled =
+    email.includes("@") &&
+    email.length >= 3 &&
+    username.length >= 3 &&
+    password.length >= 6;
   const userObject = {
     first_name: firstName,
     last_name: lastName,
     email: email,
     password: password,
+    username: username,
   };
   return (
     <>
@@ -25,10 +31,11 @@ const Register = () => {
           onSubmit={(e) => {
             e.preventDefault();
             axios
-              .post("https://api.crashpad.dev/users", userObject)
+              // .post("https://api.crashpad.dev/auth/local/register", userObject)
+              .post("https://api.crashpad.dev/auth/local/register", userObject)
               .then((res) => {
                 alert(
-                  `Thanks for registering, ${res.data.first_name}!\nYou can now login with these credentials.`
+                  `Thanks for registering, ${firstName}!\nYou can now login with these credentials.`
                 );
                 console.log(res);
               })
@@ -50,7 +57,7 @@ const Register = () => {
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white"
                 id="grid-first-name"
                 type="text"
-                placeholder="Jane"
+                placeholder="Hal"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
               />
@@ -67,7 +74,7 @@ const Register = () => {
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-last-name"
                 type="text"
-                placeholder="Doe"
+                placeholder="Emmerich"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
@@ -86,9 +93,31 @@ const Register = () => {
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-email"
                 type="email"
-                placeholder="email@email.com"
+                placeholder="otacon@at.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+              />
+              <p className="text-gray-600 text-xs italic">
+                No confirmation required.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-3 mb-6">
+            <div className="w-full px-3">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-username"
+              >
+                Username
+              </label>
+              <input
+                required
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-username"
+                type="text"
+                placeholder="Otacon"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
             </div>
           </div>
@@ -110,7 +139,7 @@ const Register = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
               <p className="text-gray-600 text-xs italic">
-                Make it as long and as crazy as you'd like
+                Do you trust me with your real one?
               </p>
             </div>
           </div>
@@ -123,8 +152,8 @@ const Register = () => {
               onChange={(e) => setUserType(e.target.value)}
             >
               <option>Will you be renting or hosting?</option>
-              <option value="renter">I will be renting</option>
-              <option value="host">I will be hosting</option>
+              <option value="Renter">I will be renting</option>
+              <option value="Host">I will be hosting</option>
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg

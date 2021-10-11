@@ -16,6 +16,7 @@ function App() {
 
   useEffect(() => {
     axios
+      // .get("https://api.crashpad.dev/pads")
       .get("https://api.crashpad.dev/pads")
       .then((res) => {
         setProperties(res.data);
@@ -29,13 +30,13 @@ function App() {
   ) : (
     <>
       <Navbar />
-
       <Switch>
         <Route
           path={`/create-listing`}
           exact={true}
           component={CreateListing}
         />
+        {/* <Route path={`/`} exact={true} component={Hero} /> */}
         <Route path="/login" exact={true} component={Login} />
         <Route path="/register" exact={true} component={Register} />
         <Route path="/pad/:id" exact={true} component={PropertyPage} />
@@ -43,6 +44,7 @@ function App() {
           <FilterablePropertyGrid properties={properties} />
         </Route>
       </Switch>
+      )
     </>
   );
 }
