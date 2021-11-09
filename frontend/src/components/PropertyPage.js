@@ -4,6 +4,9 @@ import axios from "axios";
 import properties from "../properties.json";
 import LazyLoad from "react-lazyload";
 import { BookmarkOutline } from "heroicons-react";
+import dotenv from "dotenv";
+
+require("dotenv").config();
 
 const PropertyPage = (props) => {
   const [property, setProperty] = useState([]);
@@ -12,9 +15,10 @@ const PropertyPage = (props) => {
 
   useEffect(() => {
     axios
-      // .get(`https://api.crashpad.dev/pads/${props.match.params.id}`)
       .get(`https://api.crashpad.dev/pads/${props.match.params.id}`)
+      // .get(process.env.REACT_APP_API_URL + "/pads/" + props.match.params.id)
       .then((res) => {
+        res.data.ammenities = res.data.ammenities.split(",");
         setProperty(res.data);
         setLoading(false);
       })
@@ -96,25 +100,28 @@ const PropertyPage = (props) => {
           </span>
         </div>
 
-        <div class="flex justify-between px-4">
-          <div class="truncate text-xs text-gray-600">
-            {/* {ammenities.map((ammenity, index) => {
-              return (
-                <span
-                  className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-1"
-                  key={index}
-                >
-                  {ammenity}
-                </span>
-              );
-            })} */}
-          </div>
-          <span class="border-2 border-gray-200 rounded shadow-lg p-4">
+        {/* <div class="flex justify-between px-4"> */}
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex justify-between px-4 divide-y divide-y-reverse">
+            <div class="truncate text-xs text-gray-600">
+              {property.ammenities.map((ammenity, index) => {
+                return (
+                  <span
+                    className="inline-block bg-gray-200 rounded-full px-3 py-1 text-base font-semibold text-gray-700 mr-1"
+                    key={index}
+                  >
+                    {ammenity}
+                  </span>
+                );
+              })}
+            </div>
+            {/* <span class="border-2 border-gray-200 rounded shadow-lg p-4">
             <h3 class="text-xl pb-4">{`$${property.price} / night`}</h3>
             <button class="inline-block bg-yellow-500 rounded px-24 py-4 text-lg font-semibold text-white mr-1 focus:ring-4 focus:ring-yellow-300 focus:ring-inset">
               Reserve
             </button>
-          </span>
+          </span> */}
+          </div>
         </div>
       </section>
     </div>
