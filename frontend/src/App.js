@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     axios
       // .get("https://api.crashpad.dev/pads")
-      .get("https://api.crashpad.dev/pads")
+      .get("http://localhost:1337/pads")
       .then((res) => {
         setProperties(res.data);
         setLoading(false);
@@ -26,7 +26,9 @@ function App() {
   }, []);
 
   return isLoading ? (
-    <div className="text-center">Loading...</div>
+    <div className="text-center">
+      Loading... or maybe something is awfully wrong
+    </div>
   ) : (
     <>
       <Navbar />

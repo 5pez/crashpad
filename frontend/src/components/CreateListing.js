@@ -100,7 +100,7 @@ export default class CreateListing extends Component {
     if (
       axios
         // .post("https://api.crashpad.dev/pads", propertyObject)
-        .post("https://api.crashpad.dev/pads", {
+        .post("http://localhost:1337/pads", {
           propertyObject,
           headers: {
             Authorization: "",

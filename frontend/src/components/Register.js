@@ -32,7 +32,7 @@ const Register = () => {
             e.preventDefault();
             axios
               // .post("https://api.crashpad.dev/auth/local/register", userObject)
-              .post("https://api.crashpad.dev/auth/local/register", userObject)
+              .post("http://localhost:1337/auth/local/register", userObject)
               .then((res) => {
                 alert(
                   `Thanks for registering, ${firstName}!\nYou can now login with these credentials.`

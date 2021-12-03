@@ -21,7 +21,7 @@ const Login = () => {
             e.preventDefault();
             axios
               // .post("https://api.crashpad.dev/auth/local", userObject)
-              .post("https://api.crashpad.dev/auth/local", userObject)
+              .post("http://localhost:1337/auth/local", userObject)
               .then((res) => {
                 alert(`Welcome, ${res.data.user.first_name}`);
                 console.log(res);

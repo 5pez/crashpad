@@ -22,7 +22,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
-  "proxy": "https://api.crashpad.dev:1337",
+  "proxy": "http://localhost:1337",
   "scripts": {
     "start": "craco start",
     "build": "craco build",

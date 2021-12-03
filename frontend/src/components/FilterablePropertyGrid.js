@@ -46,7 +46,6 @@ const FilterablePropertyGrid = (props) => {
 
   useEffect(() => {
     if (price <= maxPrice) {
-      console.log(price);
       setProperties(
         properties.filter((property) => {
           return property.price <= price;

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { BookmarkOutline } from "heroicons-react";
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazyload";
+import noPropertyPhoto from "../images/no-property-photo.jpg";
 
 export default function PropertyCard(props) {
   const property = props.properties;
@@ -15,9 +16,7 @@ export default function PropertyCard(props) {
       property.image === undefined ||
       !property.image.includes("/")
     ) {
-      setImage(
-        "https://www.realestateguide.com/wp-content/plugins/rets_duo/assets/noimage-large.png"
-      );
+      setImage(noPropertyPhoto);
     } else {
       setImage(property.image);
     }
