@@ -9,6 +9,8 @@ import noPropertyPhoto from "../images/no-property-photo.jpg";
 
 require("dotenv").config();
 
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
+
 const PropertyPage = (props) => {
   const [property, setProperty] = useState([]);
   const [image, setImage] = useState(property.image);
@@ -17,8 +19,7 @@ const PropertyPage = (props) => {
   // Get property by id
   useEffect(() => {
     axios
-      .get(`http://localhost:1337/pads/${props.match.params.id}`)
-      // .get(process.env.REACT_APP_API_URL + "/pads/" + props.match.params.id)
+      .get(`${REACT_APP_API_URL}/properties/${props.match.params.id}`)
       .then((res) => {
         res.data.ammenities = res.data.ammenities.split(",");
         setProperty(res.data);
@@ -50,6 +51,8 @@ const PropertyPage = (props) => {
         </h1>
         <div class="flex justify-between pb-4">
           <span class="flex space-x-2">
+            {/* todo add Host name */}
+
             <span class="text-gray-600 text-sm px-3 py-1">
               Hosted by <a href="#">{property.host}</a>
             </span>

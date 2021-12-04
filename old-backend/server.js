@@ -1,25 +1,20 @@
-let express = require("express");
-let mongoose = require("mongoose");
-let cors = require("cors");
-let bodyParser = require("body-parser");
-let dbConfig = require("./database/db");
+const express = require("express");
+const session = require("express-session");
+const passport = require("passport");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const dbConfig = require("./database/db");
 const createError = require("http-errors");
-const path = require("path");
+require("./middleware/auth");
+const dotenv = require("dotenv").config();
+const User = require("./models/User");
+
+const SESSION_SECRET = process.env.SESSION_SECRET;
 
 // Express Route
 const propertyRoute = require("./routes/property.route");
-const userRoute = require("./routes/user.route");
-
-// // If in production, then use static frontend build files.
-// if (process.env.NODE_ENV === "production") {
-//   // Serve any static files
-//   app.use(express.static(path.join(__dirname, "../frontend/build")));
-
-//   // Handle React routing, return all requests to React app
-//   app.get("*", function (req, res) {
-//     res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
-//   });
-// }
+// const userRoute = require("./routes/user.route");
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
@@ -36,16 +31,63 @@ mongoose
     }
   );
 
+const isLoggedIn = (req, res, next) => {
+  req.user ? next() : res.sendStatus(401);
+};
+
 const app = express();
+
+// Session Middleware + Passport Middleware
+app.use(
+  session({ secret: SESSION_SECRET, resave: false, saveUninitialized: true })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Bodyparser for idk what
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
     extended: true,
   })
 );
+
+// CORS because CORS is annoying
 app.use(cors());
+
+app.get(
+  "/auth/google",
+  passport.authenticate("google", { scope: ["profile", "email"] })
+);
+
+app.get(
+  "/auth/google/callback",
+  passport.authenticate("google", {
+    failureRedirect: "/auth/google/failure",
+    successRedirect: "/auth/google/success",
+  })
+);
+
+app.get("/auth/google/success", isLoggedIn, (req, res) => {
+  res.send(`Hello ${req.user.displayName}`);
+});
+
+app.get("/auth/google/failure", (req, res) => {
+  res.send("Authentication failed. We can't find you.");
+});
+
+// app.get("/create-listing", (req, res) => {
+//   // go to create-listing React component
+// });
+
+app.get("/logout", (req, res) => {
+  req.logout();
+  req.session.destroy();
+  res.send("Logged out. Never come back... jk :)");
+});
+
 app.use("/properties", cors(), propertyRoute);
-app.use("/users", cors(), userRoute);
+// app.use("/users", cors(), userRoute);
 
 // PORT
 const port = process.env.PORT || 4000;

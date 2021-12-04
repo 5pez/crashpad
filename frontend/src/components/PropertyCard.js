@@ -25,7 +25,8 @@ export default function PropertyCard(props) {
   return (
     <article className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl">
       <div>
-        <Link to={`/pad/${property.id}`}>
+        {/* <Link to={`/pad/${property.id}`}> */}
+        <Link to={`/properties/${property._id}`}>
           <LazyLoad height={250}>
             <img
               alt={
@@ -45,7 +46,8 @@ export default function PropertyCard(props) {
 
       <header className="flex items-center justify-between leading-tight md:pt-4 md:pl-4 md:pr-4">
         <h1 className="text-lg truncate">
-          <Link to={`/pad/${property.id}`}>
+          {/* <Link to={`/pad/${property.id}`}> */}
+          <Link to={`/properties/${property._id}`}>
             <a className="no-underline font-bold hover:text-yellow-500">
               {property.description}
             </a>

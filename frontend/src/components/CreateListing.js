@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+const dotenv = require("dotenv").config();
+
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 
 ///TODO: Redo this component with hooks
 // use npm package Multer for image upload
@@ -99,8 +102,7 @@ export default class CreateListing extends Component {
     };
     if (
       axios
-        // .post("https://api.crashpad.dev/pads", propertyObject)
-        .post("http://localhost:1337/pads", {
+        .post(`${REACT_APP_API_URL}/properties`, {
           propertyObject,
           headers: {
             Authorization: "",

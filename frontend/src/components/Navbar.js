@@ -38,7 +38,7 @@ export default function Navbar() {
                     </a>
                   </Link>
 
-                  <Link exact={true} to="/register">
+                  <Link exact={true} to="/auth/google">
                     <a className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                       Register
                     </a>
@@ -136,7 +136,7 @@ export default function Navbar() {
                   </a>
                 </Link>
 
-                <Link exact={true} to="/register">
+                <Link exact={true} to="/auth/google">
                   <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                     Register
                   </a>

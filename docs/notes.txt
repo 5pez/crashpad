@@ -1,0 +1,15 @@
+-------------------------------------------------------------------
+12/02/2021
+todo:
+- read up on OWASP vulnerabilities and understand them at some level
+- Verify with GCP incl a Privacy Policy
+https://support.google.com/cloud/answer/9110914#zippy=%2Csteps-to-prepare-for-verification
+
+left off on trying to add auth
+401: Unauthorized
+https://www.owasp.org/index.php/HTTP_Response_Splitting
+
+-------------------------------------------------------------------
+12/03/21
+
+Using passport, passport-local, express-session, and express-flash
