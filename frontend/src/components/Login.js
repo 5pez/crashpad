@@ -1,5 +1,8 @@
 import React from "react";
 import axios from "axios";
+const dotenv = require("dotenv").config();
+
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 
 const Login = () => {
   const [username, setUsername] = React.useState("");
@@ -20,8 +23,7 @@ const Login = () => {
           onSubmit={(e) => {
             e.preventDefault();
             axios
-              // .post("https://api.crashpad.dev/auth/local", userObject)
-              .post("https://api.crashpad.dev/auth/local", userObject)
+              .post(`${REACT_APP_API_URL}/auth/local`, userObject)
               .then((res) => {
                 alert(`Welcome, ${res.data.user.first_name}`);
                 console.log(res);

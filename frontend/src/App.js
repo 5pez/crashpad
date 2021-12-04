@@ -1,14 +1,20 @@
 import { React, Fragment } from "react";
 import { useState, useEffect } from "react";
 import "./App.css";
-import FilterablePropertyGrid from "./components/FilterablePropertyGrid";
-import PropertyPage from "./components/PropertyPage";
-import CreateListing from "./components/CreateListing";
-import Register from "./components/Register";
-import Login from "./components/Login";
+import {
+  FilterablePropertyGrid,
+  PropertyPage,
+  CreateListing,
+  Navbar,
+  Login,
+  Register,
+  Privacy,
+} from "./index";
 import { Switch, Link, Route } from "react-router-dom";
 import axios from "axios";
-import Navbar from "./components/Navbar";
+const dotenv = require("dotenv").config();
+
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 
 function App() {
   const [isLoading, setLoading] = useState(true);
@@ -16,8 +22,7 @@ function App() {
 
   useEffect(() => {
     axios
-      // .get("https://api.crashpad.dev/pads")
-      .get("https://api.crashpad.dev/pads")
+      .get(`${REACT_APP_API_URL}/properties`)
       .then((res) => {
         setProperties(res.data);
         setLoading(false);
@@ -26,7 +31,9 @@ function App() {
   }, []);
 
   return isLoading ? (
-    <div className="text-center">Loading...</div>
+    <div className="text-center">
+      Loading... or maybe something is awfully wrong
+    </div>
   ) : (
     <>
       <Navbar />
@@ -37,9 +44,11 @@ function App() {
           component={CreateListing}
         />
         {/* <Route path={`/`} exact={true} component={Hero} /> */}
+        <Route path={"/privacy"} exact={true} component={Privacy} />
         <Route path="/login" exact={true} component={Login} />
-        <Route path="/register" exact={true} component={Register} />
-        <Route path="/pad/:id" exact={true} component={PropertyPage} />
+        <Route path="/auth/google" exact={true} component={Register} />
+        {/* <Route path="/pad/:id" exact={true} component={PropertyPage} /> */}
+        <Route path="/properties/:id" exact={true} component={PropertyPage} />
         <Route path="/" exact={true}>
           <FilterablePropertyGrid properties={properties} />
         </Route>

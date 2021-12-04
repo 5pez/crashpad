@@ -5,18 +5,21 @@ import properties from "../properties.json";
 import LazyLoad from "react-lazyload";
 import { BookmarkOutline } from "heroicons-react";
 import dotenv from "dotenv";
+import noPropertyPhoto from "../images/no-property-photo.jpg";
 
 require("dotenv").config();
+
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 
 const PropertyPage = (props) => {
   const [property, setProperty] = useState([]);
   const [image, setImage] = useState(property.image);
   const [isLoading, setLoading] = useState(true);
 
+  // Get property by id
   useEffect(() => {
     axios
-      .get(`https://api.crashpad.dev/pads/${props.match.params.id}`)
-      // .get(process.env.REACT_APP_API_URL + "/pads/" + props.match.params.id)
+      .get(`${REACT_APP_API_URL}/properties/${props.match.params.id}`)
       .then((res) => {
         res.data.ammenities = res.data.ammenities.split(",");
         setProperty(res.data);
@@ -25,15 +28,14 @@ const PropertyPage = (props) => {
       .catch((err) => console.log(err));
   }, []);
 
+  // Replace image url with placeholder if no image is found
   useEffect(() => {
     if (
       property.image === "" ||
       property.image === undefined ||
       !property.image.includes("/")
     ) {
-      setImage(
-        "https://www.realestateguide.com/wp-content/plugins/rets_duo/assets/noimage-large.png"
-      );
+      setImage(noPropertyPhoto);
     } else {
       setImage(property.image);
     }
@@ -49,15 +51,25 @@ const PropertyPage = (props) => {
         </h1>
         <div class="flex justify-between pb-4">
           <span class="flex space-x-2">
-            <span class="">5 Star Host!</span>
+            {/* todo add Host name */}
+
+            <span class="text-gray-600 text-sm px-3 py-1">
+              Hosted by <a href="#">{property.host}</a>
+            </span>
+            <span class="">·</span>
+            {/* <span class="">5 Star Host!</span>
             <span class="">·</span>
             <span class="">Superhost</span>
-            <span class="">·</span>
+            <span class="">·</span> */}
             <a
               href={`http://maps.google.com/?q=${property.city}, ${property.state}, ${property.country}`}
               target="_blank"
-              class="underline"
+              class="text-gray-600 text-sm px-3 py-1"
             >{`${property.city}, ${property.state}, ${property.country}`}</a>
+            <span class="">·</span>
+            <span class="text-sm text-gray-600 bg-yellow-200 rounded-full px-3 py-1">
+              Superhost
+            </span>
           </span>
           <a href="#" class="flex space font-semibold hover:text-yellow-500">
             {<BookmarkOutline />}Save
