@@ -1,28 +1,3 @@
-// const jwt = require("jsonwebtoken");
-// require("dotenv").config();
-
-// const config = process.env;
-
-// const verifyToken = (req, res, next) => {
-//   const token =
-//     req.body.token || req.query.token || req.headers["x-access-token"];
-
-//   if (!token) {
-//     return res.status(403).send("A token is required for authentication");
-//   } else {
-//     jwt.verify(token, config.TOKEN_KEY, (err, decoded) => {
-//       if (err) {
-//         return res.status(401).send("Failed to authenticate token");
-//       }
-//       req.decoded = decoded;
-//       next();
-//     });
-//   }
-// };
-// module.exports = verifyToken;
-
-// above is for jwt
-
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const dotenv = require("dotenv").config();
