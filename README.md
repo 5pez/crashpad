@@ -22,7 +22,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://thecrashpad.netlify.app/">
+  <a href="https://crashpad.dev/">
     <img src="/frontend/src/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -34,14 +34,14 @@
   Available on <a href="https://crashpad.dev" target=_blank>crashpad.dev</a>
     <br />
     <br />
-    <a href="https://github.com/AaronElam/crashpad/tree/master/docs"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/5pez/crashpad/tree/master/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://crashpad.dev">View Demo</a>
     ·
-    <a href="https://github.com/AaronElam/crashpad/issues">Report Bug</a>
+    <a href="https://github.com/5pez/crashpad/issues">Report Bug</a>
     ·
-    <a href="https://github.com/AaronElam/crashpad/issues">Request Feature</a>
+    <a href="https://github.com/5pez/crashpad/issues">Request Feature</a>
   </p>
 </p>
 
@@ -83,7 +83,8 @@ This project started as a project in my software engineering class. Unfortunatel
 - [React](https://reactjs.org/)
 - [Node.js](https://nodejs.org/en/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [JSON Web Tokens](https://jwt.io/)
+- [PassportJS](https://passportjs.org)
+- [Google OAuth2](https://developers.google.com/identity/protocols/oauth2)
 
 <!-- GETTING STARTED -->
 
@@ -161,6 +162,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Aaron Elam - elam.j.aaron@gmail.com
 
-Project Link: [https://github.com/AaronElam/crashpad](https://github.com/AaronElam/crashpad)
+Project Link: [https://github.com/5pez/crashpad](https://github.com/5pez/crashpad)
 
 <!-- ACKNOWLEDGEMENTS -->
