@@ -31,14 +31,12 @@
   <p align="center">
     Crashpad is an online system for listing and booking short-term rentals.
     <br />
-  Available on <a href="#" target=_blank>crashpad.dev</a>
+  Available nowhere
     <br />
     <br />
     <a href="https://github.com/burzt/crashpad/tree/master/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="#">View Demo</a>
-    ·
     <a href="https://github.com/burzt/crashpad/issues">Report Bug</a>
     ·
     <a href="https://github.com/burzt/crashpad/issues">Request Feature</a>
