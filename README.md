@@ -22,7 +22,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://crashpad.dev/">
+  <a href="#">
     <img src="/frontend/src/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -31,17 +31,17 @@
   <p align="center">
     Crashpad is an online system for listing and booking short-term rentals.
     <br />
-  Available on <a href="https://crashpad.dev" target=_blank>crashpad.dev</a>
+  Available on <a href="#" target=_blank>crashpad.dev</a>
     <br />
     <br />
-    <a href="https://github.com/5pez/crashpad/tree/master/docs"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/burzt/crashpad/tree/master/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://crashpad.dev">View Demo</a>
+    <a href="#">View Demo</a>
     ·
-    <a href="https://github.com/5pez/crashpad/issues">Report Bug</a>
+    <a href="https://github.com/burzt/crashpad/issues">Report Bug</a>
     ·
-    <a href="https://github.com/5pez/crashpad/issues">Request Feature</a>
+    <a href="https://github.com/burzt/crashpad/issues">Request Feature</a>
   </p>
 </p>
 
@@ -71,8 +71,6 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-
-![product-screenshot](https://crashpad.dev/meta.png)
 
 This project started as a project in my software engineering class. Unfortunately for us, the course was over the summer of 2020 and no actual software was written, only documents. In that course, I learned how to discuss the technical requirements of a project with a group and present those ideas to a shareholder (our professor). <br /> <b>This web application is the result of me wanting to turn that project into a reality.</b>
 
@@ -160,8 +158,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Aaron Elam - elam.j.aaron@gmail.com
+Aaron Elam
 
-Project Link: [https://github.com/5pez/crashpad](https://github.com/5pez/crashpad)
+Project Link: [https://github.com/burzt/crashpad](https://github.com/burzt/crashpad)
 
 <!-- ACKNOWLEDGEMENTS -->
